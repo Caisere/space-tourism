@@ -1,4 +1,5 @@
 import { DestinationData} from "../api/destination/route"
+import { BASE_URL } from "./constant"
 
 type GetDestination = {
     success: boolean,
@@ -7,7 +8,7 @@ type GetDestination = {
 }
 
 export async function getDestinationData():Promise<GetDestination> {
-        const response = await fetch('http://localhost:3001/api/destination', {
+        const response = await fetch(`${BASE_URL}/api/destination`, {
             // cache: 'no-store' // for dynamic data
             next: { revalidate: 3600 } // Revalidate every hour
         })

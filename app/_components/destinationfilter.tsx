@@ -22,7 +22,7 @@ function DestinationFilter() {
     }
 
     return (
-        <div className="flex flex-row border border-primary-800  justify-end mb-4">
+        <div className="flex flex-row mb-4">
             <FilterButton
                 filter='moon'
                 handleCabinFilter={handleCabinFilter}

@@ -17,8 +17,8 @@ export default async function Home({searchParams}: {
 
 
     return (
-        <div className="bg-[url('/images/destination/destinationBg-mobile.jpg')] sm:bg-[url('/images/destination/destinationBg-tablet.jpg')] lg:bg-[url('/images/destination/destinationBg-desktop.jpg')] w-screen h-screen bg-no-repeat bg-cover bg-center text-white p-2">
-            <div className="px-34 pt-36 text-center md:text-start">
+        <div className="bg-[url('/images/destination/destinationBg-mobile.jpg')] sm:bg-[url('/images/destination/destinationBg-tablet.jpg')] lg:bg-[url('/images/destination/destinationBg-desktop.jpg')] w-screen h-screen bg-no-repeat bg-cover bg-center text-white p-2 min-h-screen">
+            <div className="px-34 pt-24 md:pt-36 text-center md:text-start">
                 <span>01</span>
                 <span>Pick Your Destination</span>
             </div>
@@ -28,9 +28,11 @@ export default async function Home({searchParams}: {
                     <div className="flex justify-center w-[70%] md:w-[40%]">
                         <DestinationImg filter={filter} />
                     </div>
-                    <div className="flex-1 flex flex-col gap-6 items-center md:items-start">
+                    <div className="flex-1 md:items-start">
                         <DestinationFilter />
-                        <DestinationContent destination={destination} filter={filter} />
+                        <div className="flex flex-col gap-6 items-center md:items-start ml-8">
+                            <DestinationContent destination={destination} filter={filter} />
+                        </div>
                     </div>
                 </div>
             </div>
