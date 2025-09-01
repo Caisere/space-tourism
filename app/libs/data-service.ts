@@ -1,5 +1,6 @@
 import { DestinationData} from "../api/destination/route"
-import { BASE_URL } from "./constant"
+// import { getBaseUrl } from "./constant"
+
 
 type GetDestination = {
     success: boolean,
@@ -8,7 +9,10 @@ type GetDestination = {
 }
 
 export async function getDestinationData():Promise<GetDestination> {
-        const response = await fetch(`${BASE_URL}/api/destination`, {
+
+    const url = 'https://space-tourism-mu-snowy.vercel.app/api/destination';
+
+        const response = await fetch(url, {
             // cache: 'no-store' // for dynamic data
             next: { revalidate: 3600 } // Revalidate every hour
         })

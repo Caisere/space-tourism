@@ -20,4 +20,3 @@ export const getBaseUrl = () => {
 };
 
 
-export const BASE_URL = getBaseUrl();
