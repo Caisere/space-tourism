@@ -3,6 +3,9 @@ import DestinationFilter from "../_components/destinationfilter";
 import DestinationImg from "../_components/destinationimg";
 import { getDestinationData } from "../libs/data-service";
 
+export const dynamic = 'force-dynamic';
+
+
 export default async function Home({
   searchParams,
 }: {
