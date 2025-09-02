@@ -13,8 +13,8 @@ type TechnologyProps = {
 export default async function Home({searchParams,}: TechnologyProps) {
     
     const data = await getTechnologyData();
-   console.log(data)
-   const {tec} = data
+
+    const {tec} = data
 
 
 
