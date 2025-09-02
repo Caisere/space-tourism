@@ -16,7 +16,7 @@ function TechnologyFilter() {
     const activeFilter = searchParams.get('tech') || 'launch vehicle' as string
 
 
-    function handleCabinFilter(filter:string) {
+    function handleTechnologyFilter(filter:string) {
         const params = new URLSearchParams(searchParams);
         params.set('tech', filter);
         router.replace(`${pathname}?${params.toString()}`, {scroll: false})
@@ -26,7 +26,7 @@ function TechnologyFilter() {
         <div className="flex flex-row md:flex-col justify-between gap-4 md:max-w-[20%]">
             <TechnologyFilterButton
                 filter='launch vehicle'
-                handleCabinFilter={handleCabinFilter}
+                handleTechnologyFilter={handleTechnologyFilter}
                 activeFilter={activeFilter}
             >
                 <span>1</span>
@@ -34,7 +34,7 @@ function TechnologyFilter() {
 
             <TechnologyFilterButton
                 filter='spaceport'
-                handleCabinFilter={handleCabinFilter}
+                handleTechnologyFilter={handleTechnologyFilter}
                 activeFilter={activeFilter}
             >
                 <span>2</span>
@@ -42,7 +42,7 @@ function TechnologyFilter() {
 
             <TechnologyFilterButton
                 filter='space capsule'
-                handleCabinFilter={handleCabinFilter}
+                handleTechnologyFilter={handleTechnologyFilter}
                 activeFilter={activeFilter}
             >
                 <span>3</span>

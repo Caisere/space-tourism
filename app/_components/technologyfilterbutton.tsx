@@ -4,17 +4,17 @@
 type CrewFilterButtonProp = {
     children: React.ReactNode,
     filter: string,
-    handleCabinFilter: (filter:string) => void,
+    handleTechnologyFilter: (filter:string) => void,
     activeFilter: string
 }
 
 
 
-function TechnologyFilterButton ({children, filter, handleCabinFilter, activeFilter}:CrewFilterButtonProp) {
+function TechnologyFilterButton ({children, filter, handleTechnologyFilter, activeFilter}:CrewFilterButtonProp) {
     return (
         <button 
             className={`w-10 h-10 rounded-full border-1 hover:bg-primary-700 ${activeFilter === filter ? 'bg-primary-800' : ''}`}
-            onClick={() => handleCabinFilter(filter)}
+            onClick={() => handleTechnologyFilter(filter)}
         >
             {children}
         </button>

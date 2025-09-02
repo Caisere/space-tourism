@@ -15,7 +15,7 @@ function CrewFilter() {
     const activeFilter = searchParams.get('crew') || 'Douglas Hurley' as string
 
 
-    function handleCabinFilter(filter:string) {
+    function handleCrewFilter(filter:string) {
         const params = new URLSearchParams(searchParams);
         params.set('crew', filter);
         router.replace(`${pathname}?${params.toString()}`, {scroll: false})
@@ -25,7 +25,7 @@ function CrewFilter() {
         <div className="flex flex-row justify-between mt-4 max-w-[20%]">
             <CrewFilterButton
                 filter='Douglas Hurley'
-                handleCabinFilter={handleCabinFilter}
+                handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
             >
                 Moon
@@ -33,7 +33,7 @@ function CrewFilter() {
 
             <CrewFilterButton
                 filter='Victor Glover'
-                handleCabinFilter={handleCabinFilter}
+                handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
             >
                 Mars
@@ -41,7 +41,7 @@ function CrewFilter() {
 
             <CrewFilterButton
                 filter='mark shuttleworth'
-                handleCabinFilter={handleCabinFilter}
+                handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
             >
                 Titan
@@ -49,7 +49,7 @@ function CrewFilter() {
 
             <CrewFilterButton
                 filter='Anousheh Ansari'
-                handleCabinFilter={handleCabinFilter}
+                handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
             >
                 Europa

@@ -15,7 +15,7 @@ function DestinationFilter() {
     const activeFilter = searchParams.get('dest') || 'moon' as string
 
 
-    function handleCabinFilter(filter:string) {
+    function handleDestinationFilter(filter:string) {
         const params = new URLSearchParams(searchParams);
         params.set('dest', filter);
         router.replace(`${pathname}?${params.toString()}`, {scroll: false})
@@ -25,7 +25,7 @@ function DestinationFilter() {
         <div className="flex flex-row mb-4">
             <FilterButton
                 filter='moon'
-                handleCabinFilter={handleCabinFilter}
+                handleDestinationFilter={handleDestinationFilter}
                 activeFilter={activeFilter}
             >
                 Moon
@@ -33,7 +33,7 @@ function DestinationFilter() {
 
             <FilterButton
                 filter='mars'
-                handleCabinFilter={handleCabinFilter}
+                handleDestinationFilter={handleDestinationFilter}
                 activeFilter={activeFilter}
             >
                 Mars
@@ -41,7 +41,7 @@ function DestinationFilter() {
 
             <FilterButton
                 filter='titan'
-                handleCabinFilter={handleCabinFilter}
+                handleDestinationFilter={handleDestinationFilter}
                 activeFilter={activeFilter}
             >
                 Titan
@@ -49,7 +49,7 @@ function DestinationFilter() {
 
             <FilterButton
                 filter='europa'
-                handleCabinFilter={handleCabinFilter}
+                handleDestinationFilter={handleDestinationFilter}
                 activeFilter={activeFilter}
             >
                 Europa
