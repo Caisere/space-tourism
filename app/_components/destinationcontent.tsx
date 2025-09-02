@@ -12,7 +12,6 @@ function DestinationContent({ destination, filter }: DestinationContentProps) {
 
     const data = destination?.filter?.((dest) => dest.name === String(filter));
 
-    console.log(data)
 
     if (!data) {  
         return <div>Destination not found</div>;
