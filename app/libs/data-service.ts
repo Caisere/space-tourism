@@ -25,8 +25,9 @@ type GetTechnology = {
 export async function getDestinationData():Promise<GetDestination> {
 
     const prodUrl = 'https://space-tourism-mu-snowy.vercel.app/api/destination';
-    const localUrl = getBaseUrl()
-    const url = `${localUrl}/api/destination` || prodUrl
+    // const localUrl = getBaseUrl()
+    // const url = `${localUrl}/api/destination` || prodUrl
+    const url =  prodUrl
 
         const response = await fetch(url, {
             // cache: 'no-store' // for dynamic data
@@ -46,8 +47,9 @@ export async function getDestinationData():Promise<GetDestination> {
 export async function getCrewData():Promise<GetCrew> {
 
     const prodUrl = 'https://space-tourism-mu-snowy.vercel.app/api/crew';
-    const localUrl = getBaseUrl()
-    const url = `${localUrl}/api/crew` || prodUrl
+    // const localUrl = getBaseUrl()
+    // const url = `${localUrl}/api/crew` || prodUrl
+    const url =  prodUrl
 
         const response = await fetch(url, {
             // cache: 'no-store' // for dynamic data
@@ -65,8 +67,9 @@ export async function getCrewData():Promise<GetCrew> {
 export async function getTechnologyData():Promise<GetTechnology> {
 
     const prodUrl = 'https://space-tourism-mu-snowy.vercel.app/api/technology';
-    const localUrl = getBaseUrl()
-    const url = `${localUrl}/api/technology` || prodUrl
+    // const localUrl = getBaseUrl()
+    // const url = `${localUrl}/api/technology` || prodUrl
+    const url =  prodUrl
 
         const response = await fetch(url, {
             // cache: 'no-store' // for dynamic data
