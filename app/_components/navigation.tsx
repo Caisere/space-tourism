@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import NavigationList from "./navigationlist";
+import Hamburger from "./hamburger";
 
 
 const routes = [
@@ -35,14 +36,12 @@ function Navigation() {
             </div>
             <ul className="hidden bg-white/5 sm:flex items-center gap-4 py-4 px-8  flex-1 justify-end ">
                 {routes.map((route, i) => (
-                    <li key={route.name}>
-                        <Link href={route.link} className="flex gap-1">
-                            <span className="font-semibold">0{i}</span>
-                            {route.name.toUpperCase()}
-                        </Link>
-                    </li>
+                    <NavigationList key={route.name} route={route} index={i} />
                 ))}
             </ul>
+            <div className="block md:hidden">
+                <Hamburger />
+            </div>
         </nav>
     );
 }

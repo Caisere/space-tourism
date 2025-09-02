@@ -13,7 +13,7 @@ type FilterButtonProp = {
 function FilterButton ({children, filter, handleDestinationFilter, activeFilter}:FilterButtonProp) {
     return (
         <button 
-            className={`py-3 px-5 hover:bg-primary-700 ${activeFilter === filter ? 'bg-primary-800' : ''}`}
+            className={`py-3 hover:bg-primary-700 ${activeFilter === filter ? 'border-b-2 border-white' : ''}`}
             onClick={() => handleDestinationFilter(filter)}
         >
             {children}

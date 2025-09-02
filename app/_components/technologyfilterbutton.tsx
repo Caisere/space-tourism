@@ -13,7 +13,7 @@ type CrewFilterButtonProp = {
 function TechnologyFilterButton ({children, filter, handleTechnologyFilter, activeFilter}:CrewFilterButtonProp) {
     return (
         <button 
-            className={`w-10 h-10 rounded-full border-1 hover:bg-primary-700 ${activeFilter === filter ? 'bg-primary-800' : ''}`}
+            className={`w-10 h-10 rounded-full border-1 hover:bg-white/20 font-semibold ${activeFilter === filter ? 'bg-white text-black' : ''}`}
             onClick={() => handleTechnologyFilter(filter)}
         >
             {children}

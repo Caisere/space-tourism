@@ -23,8 +23,8 @@ export default async function Home({searchParams,}: TechnologyProps) {
 
     return (
         <div className="bg-[url('/images/crew/crewBg-mobile.jpg')] sm:bg-[url('/images/crew/crewBg-tablet.jpg')] lg:bg-[url('/images/crew/crewBg-desktop.jpg')] w-screen h-screen bg-no-repeat bg-cover bg-center text-white p-2 min-h-screen">
-            <div className="px-34 pt-24 md:pt-36 text-center md:text-start">
-                <span>03</span>
+            <div className="px-34 pt-24 md:pt-36 text-center md:text-start tracking-widest space-x-4">
+                <span className="font-semibold text-gray-500">03</span>
                 <span>Space Launch 101</span>
             </div>
 

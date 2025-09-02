@@ -22,7 +22,7 @@ function DestinationFilter() {
     }
 
     return (
-        <div className="flex flex-row mb-4">
+        <div className="flex flex-row justify-center md:justify-start mb-4 gap-4">
             <FilterButton
                 filter='moon'
                 handleDestinationFilter={handleDestinationFilter}

@@ -22,38 +22,34 @@ function CrewFilter() {
     }
 
     return (
-        <div className="flex flex-row justify-between mt-4 max-w-[20%]">
+        <div className="flex flex-row justify-between gap-6 mt-4">
             <CrewFilterButton
                 filter='Douglas Hurley'
                 handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
-            >
-                Moon
-            </CrewFilterButton>
+            />
+            
 
             <CrewFilterButton
                 filter='Victor Glover'
                 handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
-            >
-                Mars
-            </CrewFilterButton>
+            />
+            
 
             <CrewFilterButton
                 filter='mark shuttleworth'
                 handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
-            >
-                Titan
-            </CrewFilterButton>
+            />
+            
 
             <CrewFilterButton
                 filter='Anousheh Ansari'
                 handleCrewFilter={handleCrewFilter}
                 activeFilter={activeFilter}
-            >
-                Europa
-            </CrewFilterButton>
+            />
+            
         </div>
     );
 }
