@@ -31,10 +31,10 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <NavigationProvider>
-                <header className="">
-                    <Navigation />
-                </header>
-                <MobileNavigation />
+                    <header>
+                        <Navigation />
+                    </header>
+                    <MobileNavigation />
                 </NavigationProvider>
                 <main className="">{children}</main>
             </body>
